@@ -1,0 +1,14 @@
+version: 0.0
+os: windows
+files:
+  - source: /
+    destination: C:\Users\Administrator\Desktop\deplopy
+hooks:
+  BeforeInstall:
+    - location: app.bat
+      timeout: 300
+      runas: administrator
+  ApplicationStop:
+    - location: stop.bat
+      timeout: 300
+      runas: administrator
